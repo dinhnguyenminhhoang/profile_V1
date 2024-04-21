@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: DBold;
+    src: url("assets/fonts/DancingScriptBold.ttf") format("opentype");
+}
+@font-face {
+    font-family: DMedium;
+    src: url("assets/fonts/DancingScriptMedium.ttf") format("opentype");
+}
+
+@font-face {
+    font-family: DRegular;
+    src: url("assets/fonts/DancingScriptRegular.ttf") format("opentype");
+}
+
+@font-face {
+    font-family: DSemibold;
+    src: url("assets/fonts/DancingScriptSemiBold.ttf") format("opentype");
+}
+@font-face {
+    font-family: SRegukar;
+    src: url("assets/fonts/Jersey25Regular.ttf") format("opentype");
+}
+@font-face {
+    font-family: PRegular;
+    src: url("assets/fonts/ParisienneRegular.ttf") format("opentype");
+}
+body {
+    background-color: black;
+}
