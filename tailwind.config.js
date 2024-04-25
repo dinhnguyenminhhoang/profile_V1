@@ -5,6 +5,26 @@ export default {
         extend: {
             fontFamily: {
                 primary: "PRegular",
+                DBold: "DBold",
+                DMedium: "DMedium",
+                DRegular: "DRegular",
+                DSemibold: "DSemibold",
+                SRegukar: "SRegukar",
+            },
+            animation: {
+                text: "text 2s ease infinite",
+            },
+            keyframes: {
+                text: {
+                    "0%, 100%": {
+                        "background-size": "200% 200%",
+                        "background-position": "left center",
+                    },
+                    "50%": {
+                        "background-size": "200% 200%",
+                        "background-position": "right center",
+                    },
+                },
             },
         },
     },

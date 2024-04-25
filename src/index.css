@@ -29,5 +29,75 @@
     src: url("assets/fonts/ParisienneRegular.ttf") format("opentype");
 }
 body {
-    background-color: black;
+    background-color: rgb(2, 14, 45);
+}
+.btn {
+    display: grid;
+    place-items: center;
+    width: 200px;
+    height: 200px;
+    margin-right: 20px;
+    background: #222;
+    border: none;
+    position: relative;
+    border-radius: 10px;
+    cursor: pointer;
+    color: aliceblue;
+}
+.icon {
+    color: rgba(254, 254, 254, 0.1);
+    font-size: 35px;
+    z-index: 10;
+}
+.animate1::before {
+    position: absolute;
+    content: "";
+    width: 200px;
+    height: 200px;
+    background: coral;
+    z-index: -1;
+    transition: 0.2s;
+    animation: animate 2s linear infinite;
+    border-radius: 15px;
+}
+.animate1:hover::before {
+    width: 212px;
+    height: 208px;
+}
+.animate2 {
+    overflow: hidden;
+}
+.animate2::before {
+    position: absolute;
+    content: "";
+    width: 50%;
+    height: 180%;
+    background: #fff;
+    transform: rotate(45deg);
+    border-radius: 8px;
+}
+.animate2:hover::before {
+    animation: spiner 1s linear infinite;
+}
+.animate2::after {
+    position: absolute;
+    content: "";
+    inset: 6px;
+    background-color: #222;
+}
+/* .animate3 {
+    animation: animate 1s linear infinite;
+} */
+@keyframes animate {
+    50% {
+        filter: hue-rotate(350deg);
+    }
+}
+@keyframes spiner {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
