@@ -28,14 +28,23 @@
     font-family: PRegular;
     src: url("assets/fonts/ParisienneRegular.ttf") format("opentype");
 }
+@font-face {
+    font-family: RJersey;
+    src: url("assets/fonts/Jersey25Regular.ttf") format("opentype");
+}
+@font-face {
+    font-family: RMerriweather;
+    src: url("assets/fonts/Merriweather-Regular.ttf") format("opentype");
+}
 body {
     background-color: rgb(2, 14, 45);
+    color: #fff;
 }
 .btn {
     display: grid;
     place-items: center;
-    width: 200px;
-    height: 200px;
+    width: 140px;
+    height: 40px;
     margin-right: 20px;
     background: #222;
     border: none;
@@ -52,18 +61,18 @@ body {
 .animate1::before {
     position: absolute;
     content: "";
-    width: 200px;
-    height: 200px;
+    width: 146px;
+    height: 46px;
     background: coral;
     z-index: -1;
     transition: 0.2s;
     animation: animate 2s linear infinite;
     border-radius: 15px;
 }
-.animate1:hover::before {
+/* .animate1:hover::before {
     width: 212px;
     height: 208px;
-}
+} */
 .animate2 {
     overflow: hidden;
 }

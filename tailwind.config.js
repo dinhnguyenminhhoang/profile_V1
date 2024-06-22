@@ -10,6 +10,8 @@ export default {
                 DRegular: "DRegular",
                 DSemibold: "DSemibold",
                 SRegukar: "SRegukar",
+                RJersey: "RJersey",
+                RMerriweather: "RMerriweather",
             },
             animation: {
                 text: "text 2s ease infinite",
