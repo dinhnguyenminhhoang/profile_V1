@@ -38,8 +38,27 @@
 }
 body {
     background-color: rgb(2, 14, 45);
+    scrollbar-width: thin;
+    scrollbar-color: #888 #f1f1f1;
     color: #fff;
 }
+::-webkit-scrollbar {
+    width: 1px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
 .btn {
     display: grid;
     place-items: center;
