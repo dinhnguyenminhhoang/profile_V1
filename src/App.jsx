@@ -17,7 +17,7 @@ function App() {
     };
     return (
         <div className="min-h-screen">
-            <div className="h-[60px] flex justify-between items-center p-6  border-b border-[rgba(255,255,255,.4)] bg-[#000001] fixed top-0 right-0 left-0  z-[999999]">
+            <div className="h-[60px] flex justify-between items-center p-6  border-b border-[rgba(255,255,255,.4)] bg-[rgba(0,0,0,0.8)] fixed top-0 right-0 left-0  z-[999999]">
                 <button
                     onClick={(e) => {
                         e.preventDefault(); // Prevent the default anchor behavior
@@ -55,7 +55,7 @@ function App() {
                         Hello word!
                     </h1>
                     <h1 className="text-white font-DBold text-[6rem] relative after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:h-[3px] after:w-32 after:bg-lime-600 after:shadow-md after:shadow-white">
-                        I'm full - stack develop
+                        I'm full - stack developer
                     </h1>
                     <p className="font-RMerriweather text-sm text-white max-w-[70%] line-clamp-4">
                         With the foundation of my current experience, I am
