@@ -6,7 +6,12 @@ const Profile = ({ setRef }) => {
         ref?.current ? setRef(ref.current) : null;
     }, [ref]);
     return (
-        <div ref={ref} className="flex justify-center content-center mt-[60px]">
+        <div
+            ref={ref}
+            className="flex justify-center content-center mt-[60px]"
+            data-aos="fade-up"
+            data-aos-easing="ease-in-out"
+        >
             <div className="border border-gray-300 shadow-lg py-10 px-10 w-4/5 mt-10 mb-10 bg-[rgba(0,0,0,0.4)] rounded-md">
                 <header>
                     <ul className="flex flex-wrap justify-end gap-2">

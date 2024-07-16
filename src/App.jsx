@@ -1,24 +1,39 @@
-import { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import "./App.css";
 import Profile from "./Pages/Profile";
 import { Link } from "react-router-dom";
 import logoGif from "./assets/imgs/logo.gif";
+
 function App() {
     const [refProfile, setRefProfile] = useState();
     const footerRef = useRef();
+
+    useEffect(() => {
+        AOS.init({ duration: 1000 });
+    }, []);
+
     const handleStarted = () => {
         refProfile?.scrollIntoView({ behavior: "smooth" });
     };
+
     const setRef = (ref) => {
         setRefProfile(ref);
     };
+
     const handleContact = () => {
         footerRef?.current?.scrollIntoView({ behavior: "smooth" });
     };
+
     return (
         <div className="min-h-screen">
-            <div className="h-[60px] flex justify-between items-center p-6  border-b border-[rgba(255,255,255,.4)] bg-[rgba(0,0,0,0.8)] fixed top-0 right-0 left-0  z-[999999]">
+            <div
+                data-aos="slide-down"
+                className="h-[60px] flex justify-between items-center p-6 border-b border-[rgba(255,255,255,.4)] bg-[rgba(0,0,0,0.8)] fixed top-0 right-0 left-0 z-[999999]"
+            >
                 <button
+                    data-aos="fade-down-right"
                     onClick={(e) => {
                         e.preventDefault(); // Prevent the default anchor behavior
                         window.scrollTo({
@@ -28,12 +43,15 @@ function App() {
                     }}
                     className="flex items-center cursor-pointer scroll-smooth duration-300"
                 >
-                    <img src={logoGif} width={70} height={60} />
-                    <h1 className="text-xl font-bold font-primary filter bg-gradient-to-r bg-clip-text  text-transparent  from-indigo-500 via-purple-500 to-indigo-500 animate-text">
+                    <img src={logoGif} width={70} height={60} alt="Logo" />
+                    <h1 className="text-xl font-bold font-primary filter bg-gradient-to-r bg-clip-text text-transparent from-indigo-500 via-purple-500 to-indigo-500 animate-text">
                         HoàngDev
                     </h1>
                 </button>
-                <div className="flex items-center gap-4 text-lg font-SRegukar text-white">
+                <div
+                    data-aos="fade-down-left"
+                    className="flex items-center gap-4 text-lg font-SRegukar text-white"
+                >
                     <button
                         onClick={handleStarted}
                         className="hover:text-[rgba(255,255,255,.6)] transition-all"
@@ -51,13 +69,22 @@ function App() {
             </div>
             <div className="h-full flex justify-center p-10 items-start mt-[60px]">
                 <div className="flex flex-col items-center gap-4">
-                    <h1 className="text-white font-DBold text-4xl">
-                        Hello word!
+                    <h1
+                        className="text-white font-DBold text-4xl"
+                        data-aos="fade-down"
+                    >
+                        Hello world!
                     </h1>
-                    <h1 className="text-white font-DBold text-[6rem] relative after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:h-[3px] after:w-32 after:bg-lime-600 after:shadow-md after:shadow-white">
-                        I'm full - stack developer
+                    <h1
+                        className="text-white font-DBold text-[6rem] relative after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:h-[3px] after:w-32 after:bg-lime-600 after:shadow-md after:shadow-white"
+                        data-aos="fade-up"
+                    >
+                        I'm a full-stack developer
                     </h1>
-                    <p className="font-RMerriweather text-sm text-white max-w-[70%] line-clamp-4">
+                    <p
+                        className="font-RMerriweather text-sm text-white max-w-[70%] line-clamp-4"
+                        data-aos="slide-down"
+                    >
                         With the foundation of my current experience, I am
                         fervently pursuing the path to becoming a proficient web
                         developer. My journey is marked by a relentless pursuit
@@ -80,12 +107,14 @@ function App() {
                     </p>
                     <img
                         src="https://i.pinimg.com/originals/61/c3/6e/61c36e236bdcc77ab100077492bcea1b.gif"
-                        alt=""
+                        alt="Developer animation"
                         className="w-auto h-[600px]"
+                        data-aos="zoom-in"
                     />
                     <button
                         onClick={handleStarted}
                         className="p-2 text-black font-RMerriweather text-sm bg-white rounded-lg btn animate1"
+                        data-aos="flip-right"
                     >
                         Get Started
                     </button>
@@ -95,6 +124,7 @@ function App() {
             <section
                 ref={footerRef}
                 className="bg-[rgba(0,0,0,.4)] flex justify-center w-full"
+                data-aos="fade-up"
             >
                 <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
                     <div className="mb-6 max-w-3xl text-center sm:text-center md:mx-auto md:mb-12">
@@ -112,9 +142,9 @@ function App() {
                                     viewBox="0 0 24 24"
                                     fill="none"
                                     stroke="currentColor"
-                                    stroke-width="2"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
+                                    strokeWidth="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
                                     className="h-6 w-6"
                                 >
                                     <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"></path>
@@ -125,7 +155,7 @@ function App() {
                                 <h3 className="text-lg font-medium leading-6">
                                     Address
                                 </h3>
-                                <p className="">Thủ Đức - Hồ CHí Minh</p>
+                                <p className="">Thủ Đức - Hồ Chí Minh</p>
                             </div>
                         </li>
                         <li className="flex">
@@ -137,9 +167,9 @@ function App() {
                                     viewBox="0 0 24 24"
                                     fill="none"
                                     stroke="currentColor"
-                                    stroke-width="2"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
+                                    strokeWidth="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
                                     className="h-6 w-6"
                                 >
                                     <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"></path>
@@ -187,7 +217,7 @@ function App() {
                                     strokeWidth="2"
                                     strokeLinecap="round"
                                     strokeLinejoin="round"
-                                    classNamed="h-6 w-6"
+                                    className="h-6 w-6"
                                 >
                                     <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path>
                                     <path d="M12 7v5l3 3"></path>
